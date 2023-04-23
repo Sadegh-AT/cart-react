@@ -5,10 +5,11 @@ export default class Item extends Component {
     return (
       <div className="Item">
         <div className="item-image">
-          <img src="s" alt="" />
+          <img src={this.props.image} alt="" />
         </div>
         <h2 className="item-price">
-          200<span>$</span>
+          {this.props.price}
+          <span>$</span>
         </h2>
         <button className="item-btn">
           <svg

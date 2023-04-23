@@ -25,6 +25,7 @@
   align-items: center;
   text-align: center;
   color: #e4a13c;
+  z-index: 10;
 }
 .product-logo-place svg {
   scale: 1.4;

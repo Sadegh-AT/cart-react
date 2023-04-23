@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import "./Product.css";
 import Item from "./Item/Item";
 export default class Product extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      items: props.products,
+    };
+    console.log(props.products);
+  }
   render() {
     return (
       <div className="Product">
@@ -34,18 +42,9 @@ export default class Product extends Component {
             </svg>
           </div>
           <div className="product-items">
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
+            {this.state.items.map((item) => (
+              <Item key={item.id} {...item}></Item>
+            ))}
           </div>
         </div>
       </div>
