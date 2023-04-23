@@ -40,6 +40,12 @@ export default class Product extends Component {
             <Item></Item>
             <Item></Item>
             <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
           </div>
         </div>
       </div>
