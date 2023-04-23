@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Product.css";
-
+import Item from "./Item/Item";
 export default class Product extends Component {
   render() {
     return (
@@ -32,6 +32,14 @@ export default class Product extends Component {
                 stroke-width="2"
               />
             </svg>
+          </div>
+          <div className="product-items">
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
           </div>
         </div>
       </div>
