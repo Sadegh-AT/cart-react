@@ -2,15 +2,22 @@ import React, { Component } from "react";
 import "./CardItem.js.css";
 
 export default class CardItem extends Component {
+  deleteHandler(id) {
+    this.props.delete(id);
+  }
   render() {
+    let { id, image, price } = this.props;
     return (
       <div className="CartItem">
-        <img className="cart-item-img" src={this.props.image} alt="" />
+        <img className="cart-item-img" src={image} alt="" />
         <h3>
-          {this.props.price}
+          {price}
           <span>$</span>
         </h3>
-        <button className="card-item-delete">
+        <button
+          className="card-item-delete"
+          onClick={this.deleteHandler.bind(this, id)}
+        >
           <svg
             width="11"
             height="11"

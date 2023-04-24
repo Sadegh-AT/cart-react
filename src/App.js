@@ -1,11 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import "./Components/Product/Cart.css";
 // Product
 import Product from "./Components/Product/Product";
 
 // Cart
-import Cart from "./Components/Product/Cart";
 
 import React, { Component } from "react";
 

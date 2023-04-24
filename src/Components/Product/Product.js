@@ -14,12 +14,18 @@ export default class Product extends Component {
   }
   printProductInfo(id) {
     let mainProduct = this.state.items.find((item) => item.id === id);
-    console.log(mainProduct);
+
     this.setState((prev) => {
       return {
         cardItems: [...prev.cardItems, mainProduct],
       };
     });
+  }
+  deleteItem(id) {
+    console.log(
+      "%cComing Soon!",
+      "color:lightgreen; font-size:1.3rem;font-weight:900"
+    );
   }
   render() {
     return (
@@ -108,7 +114,11 @@ export default class Product extends Component {
             </div>
             <div className="cart-items">
               {this.state.cardItems.map((item) => (
-                <CardItem {...item}></CardItem>
+                <CardItem
+                  key={item.id}
+                  {...item}
+                  delete={this.deleteItem.bind(this)}
+                ></CardItem>
               ))}
             </div>
           </div>
