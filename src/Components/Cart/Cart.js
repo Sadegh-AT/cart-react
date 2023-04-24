@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Cart.css";
-
+import CardItem from "./CartItem/CardItem";
 export default class Cart extends Component {
   constructor(props) {
     super(props);
@@ -58,7 +58,9 @@ export default class Cart extends Component {
             </svg>
           </div>
           <div className="cart-items">
-            {/* {this.state.cartItem.map(item=>)} */}
+            {this.state.cartItem.map((item) => (
+              <CardItem></CardItem>
+            ))}
           </div>
         </div>
       </div>
