@@ -1,0 +1,44 @@
+.Cart {
+  width: 80%;
+}
+.cart-container {
+  margin-top: 5rem;
+  position: relative;
+  background-color: #242424;
+  width: 100%;
+  height: 80vh;
+  border-radius: 1rem;
+}
+.cart-logo-place {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  top: -0.5rem;
+  transform: translateX(-50%) translateY(-50%);
+  background: #242424;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.425);
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #e4a13c;
+  z-index: 10;
+}
+.cart-logo-place svg {
+  scale: 1.4;
+}
+.cart-items {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

@@ -1,11 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import "./Components/Product/Cart.css";
 // Product
 import Product from "./Components/Product/Product";
 
 // Cart
-import Cart from "./Components/Cart/Cart";
 
 import React, { Component } from "react";
 
@@ -87,14 +86,22 @@ export default class App extends Component {
           price: "489",
         },
       ],
+      cart: [],
     };
   }
+  // printProductInfo(id) {
+  //   let mainProduct = this.state.product.find((item) => item.id === id);
+  //   this.setState((prev) => {
+  //     return {
+  //       cart: [...prev.cart, mainProduct],
+  //     };
+  //   });
+  // }
   render() {
     return (
       <div className="App">
         <div className="container">
           <Product products={this.state.product}></Product>
-          <Cart></Cart>
         </div>
       </div>
     );
