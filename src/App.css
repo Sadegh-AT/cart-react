@@ -3,6 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "outfit";
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a0 #ffffff00;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+  padding: 1rem;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d;
+  border-radius: 10px;
+  border: 0px solid #ffffff00;
 }
 body {
   width: 100vw;
