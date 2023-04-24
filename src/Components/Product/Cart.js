@@ -1,16 +1,11 @@
 import React, { Component } from "react";
 import "./Cart.css";
-import CardItem from "./CartItem/CardItem";
+import CardItem from "./Item/CardItem";
 export default class Cart extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      cartItem: [
-        { id: 1, image: "s", price: "2134" },
-        { id: 2, image: "s", price: "133424" },
-        { id: 3, image: "s", price: "7954" },
-      ],
+      cartItems: [],
     };
   }
   render() {
@@ -58,8 +53,8 @@ export default class Cart extends Component {
             </svg>
           </div>
           <div className="cart-items">
-            {this.state.cartItem.map((item) => (
-              <CardItem></CardItem>
+            {this.state.cartItems.map((item) => (
+              <CardItem key={item.id} {...item}></CardItem>
             ))}
           </div>
         </div>

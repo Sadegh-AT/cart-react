@@ -1,17 +1,27 @@
 import React, { Component } from "react";
 import "./Item.css";
 export default class Item extends Component {
+  // constructor(props) {
+  //   super(props);
+
+  //   // this.clickHandler = this.clickHandler.bind(this);
+  // }
+
+  clickHandler(id) {
+    this.props.showProduct(id);
+  }
   render() {
+    let { id, image, price } = this.props;
     return (
       <div className="Item">
         <div className="item-image">
-          <img src={this.props.image} alt="" />
+          <img src={image} alt="" />
         </div>
         <h2 className="item-price">
-          {this.props.price}
+          {price}
           <span>$</span>
         </h2>
-        <button className="item-btn">
+        <button className="item-btn" onClick={this.clickHandler.bind(this, id)}>
           <svg
             width="12"
             height="12"

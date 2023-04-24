@@ -5,7 +5,7 @@ import "./App.css";
 import Product from "./Components/Product/Product";
 
 // Cart
-import Cart from "./Components/Cart/Cart";
+import Cart from "./Components/Product/Cart";
 
 import React, { Component } from "react";
 
@@ -87,14 +87,22 @@ export default class App extends Component {
           price: "489",
         },
       ],
+      cart: [],
     };
   }
+  // printProductInfo(id) {
+  //   let mainProduct = this.state.product.find((item) => item.id === id);
+  //   this.setState((prev) => {
+  //     return {
+  //       cart: [...prev.cart, mainProduct],
+  //     };
+  //   });
+  // }
   render() {
     return (
       <div className="App">
         <div className="container">
           <Product products={this.state.product}></Product>
-          <Cart></Cart>
         </div>
       </div>
     );
