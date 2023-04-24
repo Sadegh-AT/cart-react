@@ -2,6 +2,17 @@ import React, { Component } from "react";
 import "./Cart.css";
 
 export default class Cart extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      cartItem: [
+        { id: 1, image: "s", price: "2134" },
+        { id: 2, image: "s", price: "133424" },
+        { id: 3, image: "s", price: "7954" },
+      ],
+    };
+  }
   render() {
     return (
       <div className="Cart">
@@ -47,7 +58,7 @@ export default class Cart extends Component {
             </svg>
           </div>
           <div className="cart-items">
-            
+            {/* {this.state.cartItem.map(item=>)} */}
           </div>
         </div>
       </div>
